@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    justify-content: space-between; 
+    margin-inline: auto;
+    max-width: 1350px;
+
+ }
+ 
+
+ .link {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.25em;
+    padding: 1em 1em;
+    padding-right: 0.25em;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    img {
+        width: 32px;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+ .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 1rem 1rem;
+    user-select: none;
+ }
+ 
+
+ .link {
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+     gap: 0.25em;
+     padding: 1em 1em;
+     padding-right: 0.0em;
+     cursor: pointer;
+ 
+     color: black;
+     text-decoration: none;
+ }
+ 
+@media (width > 500px) {
+    .link {
+        padding-right: 0.25em;
+    }
+}
+
+
+ @media (width > 1000px) {
+
+     .title {
+         font-size: 2.2rem;
+     }
+ 
+     .link {
+         font-size: 1.1rem;
+     }
+ }
+ 
+ @media (width > 1200px) {
+
+     .title {
+         font-size: 2.6rem;
+     }
+ 
+     .link {
+         font-size: 1.3rem;
+     }
+ 
+ }
+ 
+ @media (width > 1400px) {
+
+     .title {
+         font-size: 2.9rem;
+     }
+ 
+     .link {
+         font-size: 1.4rem;
+     }
+ 
+ }
+ 

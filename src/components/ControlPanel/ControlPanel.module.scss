@@ -1,0 +1,151 @@
+.container {
+   display: flex;
+   justify-content: space-between; 
+   width: 800px;
+   margin-inline: auto;
+}
+
+.monthSwitch {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.month {
+    width: 16ch;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.leftButton, .rightButton {
+    display: grid;
+    place-items: center;
+    padding: 0.05em 1.4em;
+    font-size: 0.7rem;
+    border-radius: 0.5em;
+    cursor: pointer;
+    user-select: none;
+    
+    img {
+        height: 2.15em;
+    }
+}
+
+.leftButton img {
+    transform: translate(-0.06em);
+}
+
+.rightButton img {
+    transform: translate(0.06em);
+}
+
+.options {
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
+    user-select: none;
+    
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 0.75em;
+        list-style: none;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 0.25em;
+
+        padding: 1em 1em;
+        padding-right: 0;
+
+        color: rgb(0, 0, 0);   
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            width: 32px;
+        }
+    }
+
+}
+
+
+li:has(.link) {
+    padding: 0;
+    display: block;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.25em;
+    padding: 1em 1em;
+    padding-right: 0.25em;
+    cursor: pointer;
+
+    color: black;
+    text-decoration: none;
+}
+
+@media (width > 1000px) {
+    .container {
+        width: 950px;
+    }
+
+    .month {
+        font-size: 2.2rem;
+    }
+
+    .options {
+        font-size: 1.1rem;
+    }
+
+    .leftButton, .rightButton {
+        font-size: 0.8rem;
+    }
+}
+
+@media (width > 1200px) {
+    .container {
+        width: 1150px;
+    }
+    .month {
+        font-size: 2.6rem;
+    }
+
+    .options {
+        font-size: 1.3rem;
+    }
+
+    .leftButton, .rightButton {
+        font-size: .9rem;
+    }
+}
+
+@media (width > 1400px) {
+    .container {
+        width: 1350px;
+    }
+    .month {
+        font-size: 2.9rem;
+    }
+
+    .options {
+        font-size: 1.4rem;
+    }
+
+    .leftButton, .rightButton {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,174 @@
+.container {
+    position: relative;
+    aspect-ratio: 3 / 2.25;
+
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: rgb(246, 246, 246);
+    }
+}
+
+.disabled {
+    background-color: #c8c8d9;
+    box-shadow: none;
+    cursor: auto;
+
+    &:hover {
+        background-color: #c8c8d9;
+    }
+}
+
+.isPast {
+    background-color: #eff2f3;
+    cursor: auto;
+    &:hover {
+        background-color: #eff2f3;
+    }
+}
+
+.day {
+    position: absolute;
+    top: 0.5em;
+    left: 0.75em;
+    z-index: 99;
+    font-size: 0.75rem;
+    color: rgb(63, 64, 76);
+}
+
+.disabled .day {
+    display: none;
+}
+
+.isPast .day {
+    color: rgb(150, 151, 168);
+}
+
+
+.small {
+    background-color: #d2edfd;
+    color : #5395cf;
+
+    &:hover {
+        color : #174c7b;
+        background-color: #9ec3d9;
+    }
+}
+
+.medium {
+    background-color: #fdf1d2;
+    color : #c9a646;
+    &:hover {
+        color : #7f641b;
+        background-color: #dccca6;
+    }
+}
+
+.high {
+    background-color: #fdd2d2;
+    color : #cf5e5e;
+    &:hover {
+        color : #681717;
+        background-color: #dfa4a4;
+    }
+}
+
+
+
+.tasks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin-inline: auto;
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.task {
+    width: 85%;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    margin: 0.15rem 0.55rem;
+    padding: 0.25em 1em;
+
+    font-size: 0.5rem;
+    border-radius: 0.1rem;
+ 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.2), 0 1px 2px -1px rgb(0 0 0 / 0.2);
+}
+
+
+@media (width > 1000px) {
+    .tasks {
+        padding-top: 1.75rem;
+        padding-bottom: .5rem;
+    }
+
+    .task {
+        margin: 0.20rem 0.15rem;
+        padding: 0.15em 0.35em;
+        font-size: 0.6rem;
+        border-radius: 0.2rem;
+    }
+
+    .day {
+        font-size: 0.9rem;
+    }
+}
+
+@media (width > 1200px) {
+    .tasks {
+        padding-top: 2rem;
+        padding-bottom: .5rem;
+    }
+
+    .task {
+        margin: 0.20rem 0.15rem;
+        padding: 0.15em 0.5em;
+        font-size: 0.65rem;
+        border-radius: 0.25rem;
+    }
+
+    .day {
+        font-size: 1.05rem;
+    }
+}
+
+@media (width > 1400px) {
+    .tasks {
+        padding-top: 2.5rem;
+        padding-bottom: .5rem;
+    }
+
+    .task {
+        margin: 0.20rem 0.15rem;
+        padding: 0.15em 0.5rem;
+        font-size: 0.75rem;
+        border-radius: 0.3rem;
+    }
+
+    .day {
+        font-size: 1.20rem;
+    }
+}
